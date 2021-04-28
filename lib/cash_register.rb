@@ -18,7 +18,6 @@ class CashRegister
   
   def apply_discount
     if @discount != 0 
-<<<<<<< HEAD
       @total -= @total * @discount / 100
       # to output the correct total of floats, without producing a number that
       # potentially has about 10 decimal places, I found that during string
@@ -27,7 +26,6 @@ class CashRegister
       # vs. 
       # "After the discount, the total comes to $15.35"
       "After the discount, the total comes to $#{@total.round(2)}." 
-=======
       @total -= @total * @discount / 100#).round(2)
       # to apply a discount to floats, need to round to two decimal places.
       # Otherwise, potentially, a number with about 10 decimal places will get
@@ -35,9 +33,7 @@ class CashRegister
       # "After the discount, the total comes to $15.350000000000001."
       # vs. 
       # "After the discount, the total comes to $15.35"
-      "After the discount, the total comes to $#{@total}." 
->>>>>>> 769eae23c11ebcddff966c6c3b71ba810a278032
-     
+      "After the discount, the total comes to $#{@total}."
     else 
       "There is no discount to apply."
     end
