@@ -28,7 +28,7 @@ class CashRegister
             # vs. 
         # "After the discount, the total comes to $15.35"
       
-      "After the discount, the total comes to $#{@total}."
+      "After the discount, the total comes to $#{@total.round(2)}."
     else 
       "There is no discount to apply."
     end
